@@ -1,0 +1,22 @@
+public Phone(String owner) {
+	this.owner = owner;
+}
+
+public Telephone(String owner, String when) {
+	super(owner);
+	this.when = when;
+}
+
+public Telephone(String owner) {
+	super(owner);
+}
+
+public Smartphone(String owner, String game) {
+	super(owner);
+	this.game = game;
+}
+
+public Smartphone(String owner, String when, String game) {
+	super(owner, when);
+	this.game = game;
+}

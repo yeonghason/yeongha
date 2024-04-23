@@ -1,0 +1,11 @@
+void talk() {
+	System.out.println(owner + "가 통화 중");
+}
+
+void autoAnswering() {
+	System.out.println(owner + "가 부재 중이니 " + when + "에 전화 요망");
+}
+
+void playGame() {
+	System.out.println(owner + "가 " + game + " 게임을 하는 중이다.");
+}

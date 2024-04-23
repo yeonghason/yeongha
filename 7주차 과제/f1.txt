@@ -1,0 +1,34 @@
+public class Circle {
+	int radius;
+
+	void show() {
+		System.out.println("반지름이 " + radius + "인 원이다.");
+	}
+
+	public Circle(int radius) {
+		this.radius = radius;
+	}
+}
+
+public class ColoredCircle extends Circle {
+	String color;
+
+	void show() {
+		System.out.println("반지름이 " + radius + "인 " + color + " 원이다.");
+	}
+
+	public ColoredCircle(int radius, String color) {
+		super(radius);
+		this.color = color;
+	}
+}
+
+public class CircleTestDemo {
+	public static void main(String[] args) {
+		Circle c = new Circle(5);
+		Circle c2 = new ColoredCircle(10, "빨간색");
+
+		c.show();
+		c2.show();
+	}
+}
