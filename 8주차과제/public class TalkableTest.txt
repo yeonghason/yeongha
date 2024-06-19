@@ -1,0 +1,29 @@
+public class TalkableTest {
+	static void speak(Talkable a) {
+		a.talk();
+	}
+
+	public static void main(String[] args) {
+		speak(new Korean());
+		speak(new American());
+	}
+}
+
+public interface Talkable {
+	void talk();
+}
+
+public class American implements Talkable{
+    @Override
+    public void talk() {
+        System.out.println("Hello!");
+    }
+}
+
+public class Korean implements Talkable{
+
+    @Override
+    public void talk() {
+        System.out.println("안녕하세요!");
+    }
+}

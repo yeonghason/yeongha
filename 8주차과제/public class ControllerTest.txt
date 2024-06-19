@@ -1,0 +1,45 @@
+public class ControllerTest {
+    public static void main(String[] args) {
+        Controller[] c = { new TV(false), new Radio(true)};
+
+        for (Controller controller : c) {
+            controller.show();
+        }
+    }
+}
+
+abstract class Controller {
+    boolean power;
+
+    public Controller(boolean power){
+        this.power = power;
+    }
+    void show() {
+        if (power==false) System.out.println(getName() + "가 꺼졌습니다.");
+        else System.out.println(getName() + "가 켜졌습니다.");
+    }
+    abstract String getName();
+}
+
+public class TV extends Controller{
+    @Override
+    String getName() {
+        return "TV";
+    }
+
+    public TV (boolean power) {
+        super(power);
+    }
+}
+
+public class Radio extends Controller{
+
+    @Override
+    String getName() {
+        return "라디오";
+    }
+
+    Radio(boolean power) {
+        super(power);
+    }
+}

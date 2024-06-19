@@ -1,0 +1,31 @@
+public class Bird extends Countable {
+	public Bird(String name, int num) {
+		super(name, num);
+	}
+	void fly() {
+		System.out.println("2마리 " + name + "가 날아간다.");
+	}
+
+
+	@Override
+	public void count() {
+		System.out.println(name + "가 2마리 있다.");
+	}
+}
+
+
+class Tree extends Countable {
+
+	public Tree(String name, int num) {
+		super(name, num);
+	}
+
+	public void ripen() {
+		System.out.println(name + "에 열매가 잘 익었다.");
+	}
+
+	@Override
+	public void count() {
+		System.out.println(name + "가 5그루 있다.");
+	}
+}
