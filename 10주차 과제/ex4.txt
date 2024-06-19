@@ -1,18 +1,18 @@
-public class Car {
-    private final String model;
+public class MathScore implements Comparable<MathScore> {
+	String name;
+	int score;
 
-    public Car (String model){
-        this.model = model;
-    }
-    public String toString() {
-        return model;
-    }
+	public MathScore(String name, int score) {
+		this.name = name;
+		this.score = score;
+	}
 
-    @Override
-    public boolean equals(Object obj) {
-               if (this == obj) return true;
-               if (!(obj instanceof Car)) return false;
-               Car confignation = (Car) obj;
-              return model.equals(confignation.model);
-    }
+	public String toString() {
+		return name + ", " + score;
+	}
+
+	@Override
+	public int compareTo(MathScore e) {
+		return (score > e.score) ? 1 : 0;
+	}
 }

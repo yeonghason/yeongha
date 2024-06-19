@@ -1,8 +1,18 @@
-public class CarTest {
-    public static void main(String[] args) {
-        Car myCar = new Car("그랜저");
-        Car yourCar = new Car("그랜저");
+public class EnglishScore implements Comparable<EnglishScore> {
+	String name;
+	int score;
 
-        myCar.equals(yourCar);       
-    }
+	public EnglishScore(String name, int score) {
+		this.name = name;
+		this.score = score;
+	}
+
+	public String toString() {
+		return "이름 : " + name + "점수 : " + score;
+	}
+
+	@Override
+	public int compareTo(EnglishScore e) {
+		return (score > e.score) ? score : e.score;
+	}
 }

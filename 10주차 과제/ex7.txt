@@ -1,39 +1,10 @@
-public class Car {
-    private final String model;
-
-    public Car (String model){
-        this.model = model;
-    }
-    public String toString() {
-        return model;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        
-        if (this == obj) return true;
-                if (!(obj instanceof Car)) return false;
-               Car confignation = (Car) obj;
-              return model.equals(confignation.model);
-    }
-}
-
-public class CarTest {
-    public static void main(String[] args) {
-        Car myCar = new Car("그랜저");
-        Car yourCar = new Car("그랜저");
-
-        Calendar cal = Calendar.getInstance();
-        Date specificTime = cal.getTime();
-
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy");
-        String dateGab = sdf.format(specificTime);
-
-        String msf2 = MessageFormat.format("날짜: {1}, 자동차 모델={0}, 운전자(홍길동)", myCar.toString(), dateGab);
-        StringTokenizer st2 = new StringTokenizer(msf2, " ,=()");
-
-        while (st2.hasMoreTokens()) {
-            System.out.println(st2.nextToken());
-        }
-    }
+static <T> T findScore(T[] a, String name) {
+	T best = a[0];
+	for (T e : a) {
+		best = (T) e.toString().substring(0, 3);
+		if (best.equals(name)) {
+			return best;
+		}
+	}
+	return (T) "일치하는것이 없습니다.";
 }
