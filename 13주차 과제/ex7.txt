@@ -1,0 +1,10 @@
+public static List<Shape> findShapes(List<Shape> shapes, Predicate<Shape> p) {
+		List<Shape> result2 = new ArrayList<>();
+
+		for (Shape typeColorArea : shapes) {
+			if (p.test(typeColorArea)) {
+				result2.add(typeColorArea);
+			}
+		}
+		return result2;
+	}
